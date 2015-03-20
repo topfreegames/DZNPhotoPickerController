@@ -1,7 +1,7 @@
-@version = "1.6.2"
+@version = "1.6.1.1"
 
 Pod::Spec.new do |s|
-  s.name         	  = "DZNPhotoPickerController"
+  s.name         	  = "TFGPhotoPickerController"
   s.version      	  = @version
   s.summary      	  = "A photo search/picker for iOS using popular providers like 500px, Flickr, Intagram, Google Images, etc."
   s.description  	  = "This framework tries to mimic as close as possible the native UIImagePickerController API for iOS7, in terms of features, appearance and behaviour."
