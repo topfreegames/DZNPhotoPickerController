@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
     ss.dependency   'DZNEmptyDataSet', '~> 1.3.3'
     ss.dependency   'MBProgressHUD', '~> 0.9'
 
-    ss.dependency   'DZNPhotoPickerController/Services'
-    ss.dependency   'DZNPhotoPickerController/Editor'
+    ss.dependency   'TFGPhotoPickerController/Services'
+    ss.dependency   'TFGPhotoPickerController/Editor'
   end
 
   s.subspec 'Services' do |ss|
