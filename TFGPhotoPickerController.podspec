@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license     	  = { :type => 'MIT', :file => 'LICENSE' }
   s.author       	  = { "Ignacio Romero Z." => "iromero@dzen.cl" }
   
-  s.source       	  = { :git => "git@github.com:topfreegames/TFGPhotoPickerController.git", :tag => "v#{s.version}" }
+  s.source       	  = { :git => "https://github.com/topfreegames/TFGPhotoPickerController.git", :tag => "v#{s.version}" }
 
   s.default_subspec = 'Core'
   s.resources       = 'Resources', 'Source/Resources/**/*.*'
