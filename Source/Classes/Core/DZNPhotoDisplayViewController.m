@@ -23,6 +23,7 @@
 #import "MBProgressHUD.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define CURRENT_DEVICE_IPAD                         ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 static NSString *kDZNPhotoCellViewIdentifier = @"kDZNPhotoCellViewIdentifier";
 static NSString *kDZNPhotoFooterViewIdentifier = @"kDZNPhotoFooterViewIdentifier";
@@ -89,7 +90,12 @@ static CGFloat kDZNPhotoDisplayMinimumBarHeight = 44.0;
     self.view.backgroundColor = [UIColor whiteColor];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        self.edgesForExtendedLayout = UIRectEdgeAll;
+        if (CURRENT_DEVICE_IPAD) {
+            self.edgesForExtendedLayout = UIRectEdgeNone;
+        }
+        else {
+            self.edgesForExtendedLayout = UIRectEdgeAll;
+        }
         self.extendedLayoutIncludesOpaqueBars = YES;
         self.automaticallyAdjustsScrollViewInsets = YES;
     }
