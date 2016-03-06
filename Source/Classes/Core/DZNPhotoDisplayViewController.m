@@ -535,7 +535,7 @@ Returns the custom collection view layout.
         __weak DZNPhotoEditorViewController *_controller = controller;
 
         [controller.imageView sd_setImageWithPreviousCachedImageWithURL:metadata.sourceURL
-                                              andPlaceholderImage:nil
+                                                 placeholderImage:nil
                                                           options:SDWebImageCacheMemoryOnly|SDWebImageProgressiveDownload|SDWebImageRetryFailed
                                                          progress:NULL
                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
